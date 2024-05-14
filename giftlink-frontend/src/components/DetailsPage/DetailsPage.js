@@ -12,11 +12,11 @@ function DetailsPage() {
 
 
 	useEffect(() => {
-        //const authenticationToken = sessionStorage.getItem('auth-token');
-        // if (!authenticationToken) {
+        const authenticationToken = sessionStorage.getItem('auth-token');
+        if (!authenticationToken) {
 		// 	// Task 1: Check for authentication and redirect
-        //     navigate('/app/login');
-        // }
+           navigate('/app/login');
+        }
 
         // get the gift to be rendered on the details page
         const fetchGift = async () => {
