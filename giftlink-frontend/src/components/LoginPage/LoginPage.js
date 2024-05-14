@@ -19,7 +19,7 @@ function LoginPage() {
         if (bearerToken) {
             navigate('/app');
         }
-    }, [navigate]);
+    }, [navigate, bearerToken]);
     
 
     // insert code here to create handleLogin function and include console.log
