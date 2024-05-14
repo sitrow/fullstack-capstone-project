@@ -139,7 +139,7 @@ router.put('/update', async (req, res) => {
             { email },
             { $set: existingUser },
             { returnDocument: 'after'}
-        )
+        );
 
         // Task 7: create JWT authentication using secret key from .env file
         const payload = {
@@ -148,10 +148,10 @@ router.put('/update', async (req, res) => {
             },
         };
         const authtoken = jwt.sign(payload, JWT_SECRET);
-        logger.info('User updated successfully')
+        logger.info('User updated successfully');
         res.json({authtoken});
     } catch (e) {
-        logger.error(e)
+        logger.error(e);
         return res.status(500).send('Internal server error');
 
     }
